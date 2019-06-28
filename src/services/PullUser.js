@@ -1,4 +1,5 @@
 async function pullUsers(numOfUsers) {
+  // 若传入参数非数字，则默认值为10
   if (isNaN(numOfUsers)) numOfUsers = 10
 
   let userData = []
@@ -6,7 +7,7 @@ async function pullUsers(numOfUsers) {
   // 用户最大ID与最小ID
   let maxId = 100000
   let minId = 10000
-
+  // 随机生成指定数量的用户信息
   for (let i = 0; i < numOfUsers; i++) {
     let userId = parseInt(Math.random() * (maxId - minId + 1) + minId, 10)
     let userName = getRandomName()
@@ -23,7 +24,7 @@ async function pullUsers(numOfUsers) {
 
   return userData
 }
-
+// 随机返回省份
 function getRandomProvince() {
   var provinces = new Array(
     '北京市',
@@ -63,7 +64,7 @@ function getRandomProvince() {
   )
   return provinces[parseInt(Math.random() * (33 - 0 + 1) + 0, 10)]
 }
-
+// 随机生成中文名字
 function getRandomName() {
   var familyNames = new Array(
     '赵',

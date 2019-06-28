@@ -1,6 +1,7 @@
 import Koa from 'koa'
 import logger from 'koa-logger'
 import bodyparser from 'koa-bodyparser'
+// 引入koa2-cors在中间层处理跨域请求问题
 import cors from 'koa2-cors'
 import configs from './configs'
 import errorHandler from './middlewares/error-handler'
@@ -13,8 +14,10 @@ app.use(logger())
 app.use(errorHandler())
 app.use(bodyparser())
 
+// 添加跨域设置
 app.use(
   cors({
+    // Reference: https://blog.csdn.net/qq_30868289/article/details/83657535
     origin: function(ctx) {
       // if (ctx.url === '/test') {
       return '*' // 允许来自所有域名请求

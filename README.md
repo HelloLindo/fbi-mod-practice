@@ -1,8 +1,10 @@
-# fbi-project-mod
+# fbi-practice with fbi-project-mod
 
-Node service or application template base on Koa 2.
+A practice about user management moddleware which uses `fbi-project-mod` and it works with `fbi-project-vue`.
 
-> This is a fbi project template. If you haven't installed
+This node service base on Koa 2.
+
+> This is an fbi project template. If you haven't installed
 > [fbi](https://github.com/AlloyTeam/fbi) yet, use the following command to
 > install.
 >
@@ -15,29 +17,12 @@ Node service or application template base on Koa 2.
 
 ## Features
 
-- ESLint
-- ES modules
-- Environment data config
-- Local development server using [nodemon](https://github.com/remy/nodemon)
-- Debug in VSCode
+- Using Koa2 to build the APIs
+- Providing api for users to pull some user datas (Each data is generated randomly)
+- Providing api for users to edit user data (Virtually operation)
+- Providing api for users to remove user data (Virtually operation)
 
 ## Usage
-
-1. **Add template**
-
-   ```bash
-   $ fbi add https://github.com/fbi-templates/fbi-project-mod.git
-   ```
-
-1. **Create a project**
-
-   ```bash
-   $ cd path/to/empty-folder
-   $ fbi init -o mod
-
-   # or
-   $ fbi init -o mod my-app
-   ```
 
 1. **Show available tasks**
 
@@ -45,14 +30,14 @@ Node service or application template base on Koa 2.
    $ fbi ls
    ```
 
-1. **Run a task**
+2. **Run a task**
 
    ```bash
    $ fbi s   # Start dev server
    $ fbi b   # Build the project for the specified environment
    ```
 
-1. **Debug in VSCode**
+3. **Debug in VSCode**
 
    ```bash
    # 1. Start dev server
@@ -85,7 +70,7 @@ Node service or application template base on Koa 2.
 ## Test
 
 ```bash
-$ curl -i http://localhost:3000/api/demo
+$ curl -i http://localhost:3000/api/pullUsers?num_of_users=12
 ```
 
 ## Run the project in a production environment
@@ -125,11 +110,8 @@ check out [fbi-task-pack](https://github.com/fbi-templates/fbi-task-pack)
 
 - [Official templates](https://github.com/fbi-templates)
 - [fbi documentation](https://neikvon.gitbooks.io/fbi/content/)
-- Migrate from [fbi-template-mod](https://github.com/neikvon/fbi-template-mod)?
-  Check [this](https://github.com/fbi-templates/fbi-task-migrate) out.
 
 ## License
 
 [MIT](https://opensource.org/licenses/MIT)
 
-## [Changelog](./CHANGELOG.md)
