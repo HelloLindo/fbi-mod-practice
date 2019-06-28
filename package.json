@@ -1,0 +1,25 @@
+{
+  "name": "test-mod2",
+  "version": "0.0.0",
+  "description": "A project base on 'fbi-project-mod' template",
+  "scripts": {
+    "start": "pm2 start pm2.json"
+  },
+  "dependencies": {
+    "koa": "^2.7.0",
+    "koa-bodyparser": "^4.2.1",
+    "koa-logger": "^3.2.0",
+    "koa-router": "^7.4.0",
+    "koa2-cors": "^2.0.6",
+    "require-directory": "^2.1.1"
+  },
+  "author": "",
+  "license": "MIT",
+  "repository": {},
+  "fbi": {
+    "template": {
+      "name": "fbi-project-mod",
+      "version": "v4.1.2"
+    }
+  }
+}
